@@ -1,45 +1,28 @@
-# Makefile for BPHC Latex Report Class
+# Program details -------------------------------------------------------------
+TARGET      = main
+PDFNAME     = thesis
 
-LATEXMK=pdflatex
-BIBTEX=bibtex
-LATEXOPT=-jobname="Thesis" -file-line-error
-MAIN=main
-THESIS=$(MAIN).tex
-SOURCES=$(THESIS) Makefile
+# Compilers -------------------------------------------------------------------
+LATEX       = latex
+LATEXMK     = latexmk
+PDFLATEX    = pdflatex
+BIBTEX      = bibtex
 
-.PHONY: clean FORCE all
 
-all: 	$(MAIN).pdf
+# Rules for compilation -------------------------------------------------------
 
-cont: FORCE
-	$(LATEXMK) -f -pdf -pvc $(LATEXOPT) $(THESIS)
+# generate pdf
+all: $(PDFNAME).pdf
 
-$(thesis): FORCE BIB
-	$(LATEXMK) -pdf -f $(thesis)
+# rename target pdf to desired pdf name
+$(PDFNAME).pdf: $(TARGET).pdf
+	cp $< $@
 
-$(MAIN).pdf: .refresh $(SOURCES)
-	$(LATEXMK) -f -pdf $(LATEXOPT) $(THESIS)
+# generate the target pdf
+$(TARGET).pdf: $(TARGET).tex $(TARGET)-blx.bib $(TARGET).toc
+	$(PDFLATEX) $(TARGET).tex
 
-clean:
-	$(LATEXMK) -c $(MAIN).tex
-	find . \( -name "*.toc" -o -name "*.fdb_latexmk" \
-							-o -name "*.pdfsync" \
-                            -o -name "*.log" \
-                            -o -name "*.fls" \
-                            -o -name "*.aux" \
-                            -o -name "*.bbl" \
-                            -o -name "*.blg" \
-                            -o -name "*.glo" \
-                            -o -name "*.ist" \
-                            -o -name "*.lof" \
-                            -o -name "*.lot" \
-                            -o -name "*.out" \
-                            -o -name "*.toc" \
-                            \) -print0 | xargs -0 rm -f
-
-FORCE:
-	touch .refresh
-	$(MAKE) $(MAIN).pdf
-
-.refresh:
-	touch .refresh
+# generate bibliography
+$(TARGET)-blx.bib: $(TARGET).tex Bibliography.bib
+	$(PDFLATEX) $(TARGET).tex
+	$(BIBTEX) $(TARGET)

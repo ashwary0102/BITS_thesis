@@ -158,17 +158,6 @@ supervision.\\[2.5cm]
         Date:\\
     \end{flushleft}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
-    \begin{flushleft} \large
-        \vspace{2cm}
-        \rule[0.5em]{13em}{0.5pt}\\
-        \emph{Co-Supervisor} \\
-        \cosupname\\
-        \cosuppos,\\
-        \cosupinst\\
-        Date:\\
-    \end{flushleft}
-\end{minipage}\\[3cm]
     }
 
     \vfil\vfil\null
@@ -351,8 +340,6 @@ supervision.\\[2.5cm]
             \vspace{1cm}
             \emph{Under the supervision of:} \\[0.3cm]
             \supname \\ % The supervisor's name
-            \& \\
-            \cosupname\\[1cm] % The co-supervisor's name
         \end{center}
 
         \includegraphics{Figures/bits-logo.pdf} % University/department logo

@@ -1,13 +1,81 @@
+%vi : ft=tex
 % Chapter 1
 
-\chapter{Multivariable Differential Calculus} % Main chapter title
+\chapter{Multivariable Differential Analysis} % Main chapter title
 
 \label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
-
 \lhead{Chapter 1. \emph{MVC}} % This is for the header on each page - perhaps a shortened title
 
 
-%----------------------------------------------------------------------------------------
-\section{Introduction}
-%----------------------------------------------------------------------------------------
+\section{Introduction and Overview}
+Single variable calculus was a system of shortcuts formulated in the 17th century,
+to present in a simple manner the results obtained by the method of exhaustion, a
+method used since the time of Euclid to calculate areas and volumes of figures
+and surfaces. Along with Descartes' Analytic Geometry, existent algebra and
+Newton's calculus of infinite series, a complete system for integration and
+differentiation of all functions of single variable expressible as power series
+was possible.
+\newline
+Multivariable calculus is the next natural step in the process, applying the
+same techniques and principles from single variable calculus to functions of
+multiple variables.
+\newline
+The rigourous analysis and verification of the tools and techniques of calculus
+to place it on a logical and deductive footing constitutes Mathematical Analysis. Hence,
+Multivariable Differential Analysis is the branch concerned with proofs of
+validity of techniques used in multivariable differential calculus.
 
+
+\section{Directorial Derivative}
+Let U be any subset of $\bm{R}^n$ and let $\bm{f} : U \rightarrow \bm{R}^m$  be a function.
+Let $\bm{u}$ be any direction in $\bm{R}^m$ and $\bm{c}$ be any point in domain,
+then the directorial derivative aims to estimate the change in $\bm{f}$ as it
+moves from point $\bm{c}$ to neighbouring points along the direction $\bm{u}$.
+\begin{defn}
+Directorial derivative of $\bm{f}$ at point $\bm{c}$ in direction $\bm{u}$ is
+denoted by $\bm{f(c;u)}$ and defined as 
+\[ \bm{f(c;u)} = \lim_{h \to 0}
+\frac{\bm{f}(\bm{c}+h\bm{u})-\bm{f(c)}}{h} \]
+\end{defn}
+\begin{lemma}
+Existence of all directorial derivatives at a point is not a sufficient
+condition for continuity of the function.
+\end{lemma}
+\begin{proof}
+Consider the counter example,
+\end{proof}
+\begin{lemma}
+Directorial derivatives may or may not be linear operators.
+\end{lemma}
+
+
+\section{Total Derivative}
+The directorial derivative concept, although useful, has proven insufficient as
+an analog to single variable derivative becuase of two primary reasons, as shown
+above : lack of failing to preserve continuity and the possibility of
+non-linearity. So a better alternative is needed and defined as follows.
+\begin{definition}
+The total derivative of a function  $\bm{f} : \bm{U} \rightarrow \bm{R}^m$ at point
+$\bm{c}$, if it exists, is a linear operator $\bm{A_{c}} : \bm{R}^n \rightarrow \bm{R}^m$ such
+that
+\[
+\bm{f(c+v) = f(c) + A_{c}(v) + ||v||E_{c}(v)}
+\]
+where $\bm{E_{c}(v) \rightarrow 0}$ as $\bm{v\rightarrow 0}$, $\forall \bm{v}$
+$\epsilon$ $\bm{U}$. Here $\bm{U}$ is an n-ball centered at $\bm{c}$.
+\end{definition}
+
+\subsection{Properties of Total Derivative}
+\begin{theorem}
+If the total derivative of a function $\bm{f} : \bm{U} \rightarrow \bm{R}^m$
+exists at point $\bm{c}$, then
+\[
+\bm{A_{c}(v) = f(c;v)}.
+\]
+Here $\bm{U}$ is an n-ball centered at $\bm{c}$.
+\end{theorem}
+\begin{proof}
+\end{proof}
+\begin{lemma}
+If the total derivative for a function exists at a point, then it is unique.
+\end{lemma}

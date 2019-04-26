@@ -33,6 +33,20 @@
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
+%Math packages
+\usepackage{bm} % for
+
+\usepackage{amsmath} %for 
+
+\usepackage{amssymb} %for
+
+\usepackage{amsthm} %for theorem counting and theorem, lemma, defn env.
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{exmp}[thm]{Example} % same for example numbersk
+
 \usepackage[backend=bibtex]{biblatex}
 \bibliography{Bibliography}
 
@@ -157,8 +171,8 @@ A rigourous but intuitive approach to analysis in Euclidean Spaces is undertaken
 % Uncomment the lines as you write the chapters
 
 \input{Chapters/Chapter1}
-%\input{Chapters/Chapter2}
-%\input{Chapters/Chapter3}
+\input{Chapters/Chapter2}
+\input{Chapters/Chapter3}
 \input{Chapters/Chapter4}
 %\input{Chapters/Chapter5}
 %\input{Chapters/Chapter6}
@@ -176,7 +190,7 @@ A rigourous but intuitive approach to analysis in Euclidean Spaces is undertaken
 % folder
 % Uncomment the lines as you write the Appendices
 
-\input{Appendices/AppendixA}
+%\input{Appendices/AppendixA}
 %\input{Appendices/AppendixB}
 %\input{Appendices/AppendixC}
 
