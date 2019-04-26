@@ -1,15 +1,20 @@
+
 # Program details -------------------------------------------------------------
 TARGET      = main
 PDFNAME     = thesis
 
 # Compilers -------------------------------------------------------------------
-LATEX       = latex
-LATEXMK     = latexmk
 PDFLATEX    = pdflatex
 BIBTEX      = bibtex
 
+# Source details --------------------------------------------------------------
+CHAPTERS    = Chapters/*.tex
+FIGURES     = Figures/*
+APPENDICES  = Appendices/*.tex
+SOURCES     = $(CHAPTERS) $(APPENDICES) $(FIGURES) variables.tex
 
 # Rules for compilation -------------------------------------------------------
+.PHONY: all clean
 
 # generate pdf
 all: $(PDFNAME).pdf
@@ -19,10 +24,19 @@ $(PDFNAME).pdf: $(TARGET).pdf
 	cp $< $@
 
 # generate the target pdf
-$(TARGET).pdf: $(TARGET).tex $(TARGET)-blx.bib $(TARGET).toc
-	$(PDFLATEX) $(TARGET).tex
+$(TARGET).pdf: $(TARGET).tex $(TARGET)-blx.bib $(TARGET).toc $(SOURCES)
+	$(PDFLATEX) $<
+
+# generate toc
+$(TARGET).toc: $(TARGET).tex $(CHAPTERS)
+	$(PDFLATEX) $<
 
 # generate bibliography
 $(TARGET)-blx.bib: $(TARGET).tex Bibliography.bib
-	$(PDFLATEX) $(TARGET).tex
+	$(PDFLATEX) $<
 	$(BIBTEX) $(TARGET)
+
+# remove the unwanted junk
+clean:
+	rm -rf main-blx.bib main.aux main.bbl main.blg main.glo main.ist main.lof \
+		main.log main.lot main.out main.pdf main.run.xml main.toc thesis.pdf
