@@ -11,7 +11,7 @@
 *.out
 *.run.xml
 *.toc
-*-blx.bib
+*blx.bib
 *.bbl
 *.blg
 *.fdb_latexmk
