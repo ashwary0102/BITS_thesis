@@ -11,7 +11,7 @@ BIBTEX      = bibtex
 CHAPTERS    = Chapters/*.tex
 FIGURES     = Figures/*
 APPENDICES  = Appendices/*.tex
-SOURCES     = $(CHAPTERS) $(APPENDICES) $(FIGURES) variables.tex
+SOURCES     = $(CHAPTERS) $(APPENDICES) $(FIGURES) variables.tex Thesis.cls
 
 # Rules for compilation -------------------------------------------------------
 .PHONY: all clean
