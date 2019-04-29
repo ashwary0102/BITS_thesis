@@ -71,7 +71,6 @@ This section provides visual examples to get acquainted with fractals.
   \caption{A real snowflake.}
   \label{fig:real_snowflake}
 \end{figure}
-\subsection{Fractals in Nature}
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{Pictures/broccoli.png}
   \caption{Broccoli.}
@@ -126,11 +125,45 @@ available mathematical definition and hence will be used.
 \end{definition}
 The terms will be defined in the following sections.
 
-\subsection{Analysis of Cantor Dust}
+\subsection{Covering Dimension}
+The idea behind the covering dimension is that one dimensional objects in
+metric spaces can be `covered' with open balls which intersect with at most
+one other open ball. Similarly two-dimensional objects can be covered in a
+metric space using open intervals that intersect at most two other open
+balls. This of course stems from experience with objects in Euclidean spaces.
+\begin{definition}
+    For any collection of set A in a metric space (X,d), B is called its
+    refinement if it's an open cover of X such that $\forall S_A \epsilon A,
+    \exists S_B \epsilon B$ such that $ S_B \subseteq S_A$.
+\end{definition}
+\begin{definition}
+    Closed-open partition of a metric space (X,d) is an open cover of X
+    consisting of disjoint sets which are all both closed and open.
+\end{definition}
+\begin{definition}
+    A metric space is called zero-dimensional if every finite open cover has a
+    finite refinement that is a closed open partition.
+\end{definition}
+This definition intends to make dimension an implicit property of a metric
+space, so that it becomes independent of the spaces it can be embedded in.
+Generalising these notions, we get
+\begin{definition}
+    A collection of sets is defined to have order n if the intersection of any
+    number of sets greater than or equal to n+2 is a null set.
+\end{definition}
+\begin{definition}
+    A metric space (X,d) is said to have a covering dimenion of $\leqslant$n if
+    every finite open cover of X has a refinement of order $\leqslant$n. The
+    covering dimension is exactly n for X if it is $\leqslant$n but not
+    $\leqslant$n-1.
+\end{definition}
+Covering dimension is also called lebesgue dimension or topological dimension.
+
+\subsection{Hausdorff-Besicovitch Dimension}
+
+\section{Example Analysis}
+In this section, the Cantor set will be analysed as the guiding example for
+fractal analysis.
 Simple examples like Cantor dust serve as an important guide to finding
 properties which are transferrable to other more complicated cases, but are
 relatively easily studied here.
-
-\subsection{Dimensions}
-\subsubsection{Topological Dimension}
-\subsubsection{Hausdorff Dimension}
