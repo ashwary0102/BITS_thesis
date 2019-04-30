@@ -224,8 +224,8 @@ Of course, easily verified by decomposition into disjoint sets.
     \end{enumerate}
 \end{proof}
 
-
-\section{Lebesgue Measure}
+\section{Important Measures}
+\subsection{Lebesgue Measure}
 \begin{definition}
     Let [[a,b)) = $[a_1,b_1) \: \times...\times \: [a_n,b_n)$ be a half- open
     rectangle $\epsilon$ $J^n$, then
@@ -236,9 +236,47 @@ Of course, easily verified by decomposition into disjoint sets.
         called the n-dimensional Lebesgue measure.
 \end{definition}
 
-\subsection{Note on Non-Measurable Sets}
+\subsubsection{Note on Non-Measurable Sets}
 In this section, the results are presented in the spirit of a complete picture,
 but not proved.
 
 
 \section{Hausdorff Measure}
+Hausdorff measure even further generalises the notion of Lebesgue measure,
+\begin{definition}
+    The diameter of a set S in a metric space is defined as
+    \[
+        |S| = sup\{|x-y| \: : x,y \:  \: \epsilon \: S \}
+    \]
+    .
+\end{definition}
+\begin{definition}
+    A $\delta$-cover of a set F is an open cover of F such that every set in
+    $\{U_i\}$ has diameter at most $\delta$.
+\end{definition}
+Let for any set F in a metric space
+\[
+    H_\delta^s(F) = inf\{|U_i|^s : \{U_i\} is a \delta-cover of F\}
+\]
+\begin{definition}
+    s-dimensional Hausdorff measure of a set F in a metric space is defined as
+    \[
+        H^s(F) = \lim_{\delta \to 0} H_\delta^s(F)
+    \]
+\end{definition}
+\begin{theorem}
+    The s-dimensional Hausdorff measure has the following properties in
+    $\bm{R}^n$
+    \begin{enumerate}
+        \item Generalisation of n-dimensional volume : Let $F \epsilon
+            B(\bm{R}^n)$, then
+            \[
+                H^n(F) \propto \mu(F)
+            \]
+        \item For lower-dimensional subset in $\bm{R}^n$ : $H^0(F)$ gives number
+            of points if finite, and infinity otherwise
+            \newline similarly, $H^1(F)$ gives the length of a smooth curve
+            \newline and so on
+    \end{enumerate}
+\end{theorem}
+
