@@ -99,6 +99,18 @@ Properties
     $\sigma$-algebra in X.
 \end{theorem}
 \begin{proof}
+    Let $(A_i)_{i \epsilon I}$ be a collection $\sigma$-algebras, and let
+    \[
+        \bigcap_{i \: \epsilon \: I}A_i = A
+    \]
+    then,
+    \begin{enumerate}
+        \item X, $\phi \: \epsilon$ A, because X, $\phi \epsilon A_i \: \forall
+        \: i$
+        \item Let B $\epsilon$ A, then $B^c \: \epsilon$ A because B belongs to
+            all $A_i$ and hence $B^c$ belongs to all $A_i$
+        \item Same argument as above.
+    \end{enumerate}
 \end{proof}
 \begin{definition}
     Let G $\subseteq$ P(X), then the smallest $\sigma$-algebra containing G is
@@ -108,7 +120,15 @@ Properties
     For any G $\subseteq$ P(X), $\sigma$(G) exists.
 \end{theorem}
 \begin{proof}
+    Let 
+    \[
+        \sigma(G) = \bigcap_{G \subseteq A} A_i
+    \]
+    , where $A_i$ are $\sigma$-algebras which have G as a subset. By previous
+    theorem, $\sigma$(G) is also a $\sigma$-algebra. Also, $\sigma$(G) is
+    non-empty because P(X) is one $\sigma$-algebra s.t $G \subseteq P(X)$.
 \end{proof}
+%DOUBT in proof : How is indexing done for such arbitrary sets???
 
 \subsection{Borel $\sigma$-Algebra or Borel Sets}
 \begin{definition}
