@@ -276,7 +276,7 @@ Hausdorff measure even further generalises the notion of Lebesgue measure,
 \end{definition}
 Let for any set F in a metric space
 \[
-    H_\delta^s(F) = inf\{|U_i|^s : \{U_i\} is a \delta-cover of F\}
+    H_\delta^s(F) = inf\{|U_i|^s : \{U_i\} \text{ is a $\delta$-cover of F} \}
 \]
 \begin{definition}
     s-dimensional Hausdorff measure of a set F in a metric space is defined as
@@ -291,8 +291,10 @@ Let for any set F in a metric space
         \item Generalisation of n-dimensional volume : Let $F \epsilon
             B(\bm{R}^n)$, then
             \[
-                H^n(F) \propto \mu(F)
+                H^n(F) \propto \mu_n(F)
             \]
+            , where $\mu_n : \bm{B^*(R^n)} \to [0, \infty]$ is the n-dimensional lebesgue
+            measure.
         \item For lower-dimensional subset in $\bm{R}^n$ : $H^0(F)$ gives number
             of points if finite, and infinity otherwise
             \newline similarly, $H^1(F)$ gives the length of a smooth curve
@@ -300,3 +302,4 @@ Let for any set F in a metric space
     \end{enumerate}
 \end{theorem}
 
+%TODO : show examples for the hausdorff measure, and do them yourselves.

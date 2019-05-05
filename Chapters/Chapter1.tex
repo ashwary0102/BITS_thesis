@@ -75,7 +75,96 @@ exists at point $\bm{c}$, then
 Here $\bm{U}$ is an n-ball centered at $\bm{c}$.
 \end{theorem}
 \begin{proof}
+    Let the total derivative of a function $\bm{f}$ exist in the n-ball
+    $B(\bm{c}, r)$, and let $\bm{v} = h\bm{u}$
+    \[
+        \bm{f(c+\text{h}u) = f(c) + \text{h}A_c(u) + ||\text{h}u||E(\text{h}u)}
+    \]
+    Rearranging terms,
+    \[
+        \bm{f(c+\text{h}u) - f(c) = \text{h}A_c(u) + ||\text{h}u||E(\text{h}u)}
+    \]
+    On dividing by h and taking the limit to 0, error term goes to 0 and
+    $\bm{A_c(u) = f(c;u)}$ by definition.
 \end{proof}
 \begin{corollary}
 If the total derivative for a function exists at a point, then it is unique.
 \end{corollary}
+\begin{proof}
+    The directorial derivative, by definition, is a unique limit. By above
+    theorem, whenever the total derivative exists, it'll be unique.
+\end{proof}
+
+\begin{theorem}
+    If a function $\bm{f} : \bm{U} \subseteq \bm{R}^n \rightarrow \bm{R}^m$ is
+    differentiable at a point $\bm{c}$, then
+    \[
+        \bm{A_c(v) = f(c;v) = \sum_{i = 1}^{n} v_i D_i f(c)}
+    \]
+    where, $\bm{v} = v_1\bm{e_1} +...+ v_n\bm{e_n}$ and $\bm{D_kf(c)}$ is the
+    kth partial derivative of function $\bm{f}$ at point $\bm{c}$.
+\end{theorem}
+\begin{proof}
+Since the total derivative exists, directorial derivative exists and is linear
+    in $\bm{v}$ at point $\bm{c}$.
+    \[
+        \bm{f(c;v) = f(c;\sum_{i=1}^{n} v_i e_i)}
+    \]
+    \[
+        \bm{f(c;v) = \sum_{i=1}^{n} v_i f(c;e_i)}
+    \]
+    \[
+        \bm{f(c;v) = \sum_{i=1}^{n} v_i D_if(c)}
+    \]
+\end{proof}
+
+Following theorem derives the matrix form of the linear operator $\bm{A_c(v)}$
+\begin{theorem}
+    Let $\bm{f} : \bm{U} \subseteq \bm{R}^n \rightarrow \bm{R}^m$ be a function
+    with derivative defined at point $\bm{c}$ in $\bm{U}$. Let
+    $\{\bm{g_i}\}_{i=1}^{n}$ be the standard basis for $\bm{R}^n$, and let
+    $\{\bm{e_i}\}_{i=1}^{m}$ be the standard basis for $\bm{R}^m$. Then the
+    matrix of linear transformation for the derivative defined w.r.t to these
+    basis will be
+    \[
+        \bm{A_{c}} =
+        \begin{pmatrix}
+            D_{1}f_{1} & D_{2}f_{1} & \cdots & D_{n}f_{1} \\
+            D_{1}f_{2} & D_{2}f_{2} & \cdots & D_{n}f_{2} \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            D_{1}f_{m} & D_{2}f_{m} & \cdots & D_{n}f_{m}
+        \end{pmatrix}
+    \]
+    where,
+    \[
+        \bm{f(v)} = \sum_{i=1}^{m} f_i(\bm{v}) \bm{e_i}
+    \]
+    and $f_i : \bm{U} \subseteq \bm{R}^n \rightarrow \bm{R}$.
+\end{theorem}
+\begin{proof}
+    \[
+        \bm{A_c(v) = \sum_{i = 1}^{n} v_i D_i f(c)}
+    \]
+    \[
+        \bm{A_c(g_i) = \sum_{i = 1}^{n} v_i D_i f(g_i)}
+    \]
+    \[
+        \bm{A_c(g_i) = D_i f(g_i)}
+    \]
+    \[
+        \bm{A_c(g_i)} = D_i \sum_{j=1}^{n}f_j(g_i)\bm{e_j}
+    \]
+    \[
+        \bm{A_c(g_i)} = \sum_{j=1}^{n} D_i f_j(g_i)\bm{e_j}
+    \]
+    Representing in matrix form using the theorems in linear algebra, we get the
+    desired matrix.
+\end{proof}
+\begin{definition}
+    The matrix form of total derivative of a function $\bm{f} : \bm{U} \subseteq
+    \bm{R}^n \rightarrow \bm{R}^m$ at point $\bm{c}$ is called the Jacobian
+    matrix, as described in the above theorem.
+\end{definition}
+
+%TODO Chain rule, sufficient condition, equality of mixed partial derivatives,
+%Taylor's theorem for successive approximations

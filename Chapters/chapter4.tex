@@ -1,5 +1,8 @@
 % vi: filetype=tex
 % Chapter 4
+%TODO - Let's first describe all examples heurestically, then define the
+%dimensions, give examples where they are not equal, then analyse cantor set as
+%a strange set.
 
 \chapter{Fractals : An Overview} % Main chapter title and the space will
 %fucking remain here just cuz
@@ -49,11 +52,37 @@ to make sense of and understand geometrically.
 \section{Examples and Features}
 This section provides visual examples to get acquainted with fractals.
 \subsection{Fractals From Math}
+\subsubsection{Cantor Set}
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{Pictures/cantor_set.png}
   \caption{First four iterations of Cantor Set.}
   \label{fig:cantor_set}
 \end{figure}
+Cantor set is arguably the most important fractal one could consider, and also
+the simplest in terms of set theory. 
+\begin{definition}
+    Cantor set is defined as
+    \[
+        C = \bigcap_{i=0}^{\infty} C_i
+    \]
+    where  
+    \[
+        C_0 = [0,1]
+    \]
+    \[
+        C_1 = [0,\frac{1}{3}] \cup [\frac{2}{3}, 1]
+    \]
+    \[
+        C_2 = [0, \frac{1}{9}] \cup [\frac{2}{9}, \frac{3}{9} \cup
+        [\frac{6}{9}, \frac{7}{9}] \cup [\frac{8}{9}, 1]
+        \]
+    \[
+        \vdots
+    \]
+    are iteratively constructed by removing the middle third of every interval
+    and retaining the rest in every iteration.
+\end{definition}
+\subsubsection{Koch Curve}
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{Pictures/koch_curve.png}
   \caption{Koch Curve.}
@@ -64,8 +93,15 @@ This section provides visual examples to get acquainted with fractals.
   \caption{Snowflake made from Koch curves.}
   \label{fig:snowflake}
 \end{figure}
+Koch curve was first described in 1904 by von Koch as a continuous but nowhere
+differentiable curve, which could constructed simply.
+The Koch Snowflake has infinite length like the Koch curve, but has finite area.
 
 \subsection{Fractals in Nature}
+\subsubsection{Physical Objects Resembling Fractals}
+Some physical objects like the surface of a mountain, the coastline, the surface
+of a broccoli etc are 'rough' and non-euclidean in nature. They are better
+modeled for desired properties as fractals due to their self-similarity.
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{Pictures/real_snowflake.png}
   \caption{A real snowflake.}
@@ -81,6 +117,9 @@ This section provides visual examples to get acquainted with fractals.
   \caption{Broccoli's scaling.}
   \label{fig:broccoli_zoomed}
 \end{figure}
+\subsubsection{Other Occurences}
+As mentioned before, fractals have been successfully used to model a wide
+variety of things in nature, either directly or indirectly. Indirectly, 
 \subsection{Heurestic Features}
 A pre-requisite to defining something is the identification of its properties.
 Objects which have come to be alluded to as fractals often possess the following
@@ -125,7 +164,7 @@ available mathematical definition and hence will be used.
 \end{definition}
 The terms will be defined in the following sections.
 
-\subsection{Covering Dimension}
+\subsection{Covering or Topological Dimension}
 The idea behind the covering dimension is that one dimensional objects in
 metric spaces can be `covered' with open balls which intersect with at most
 one other open ball. Similarly two-dimensional objects can be covered in a
@@ -157,12 +196,45 @@ Generalising these notions, we get
     covering dimension is exactly n for X if it is $\leqslant$n but not
     $\leqslant$n-1.
 \end{definition}
-Covering dimension is also called Lebesgue dimension or topological dimension.
+Covering dimension is also called lebesgue dimension or topological dimension.
 
 \subsection{Hausdorff-Besicovitch Dimension}
 The Hausdorff Measure introduced in the previous chapter leads to a notion of
-dimension.
+dimension, because of the way Hausdorff measure behaves.
 
+\begin{theorem}
+    Let $F \epsilon \bm{B(R^n)}$ and let $0 < s < t$, then
+    \begin{enumerate}
+        \item If $H^s(F) < \infty$, then $H^t(F) = 0$.
+        \item If $H^t(F) > 0$, then $H^s(F) = \infty$.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    \begin{enumerate}
+        \item We get from theorem 3.X,
+            \[
+                H^t_\delta(F) \leqslant \delta^{t-s}H^s_\delta(F)
+            \]
+            Limiting delta to zero, we get the answer.
+        \item Similar method.
+    \end{enumerate}
+\end{proof}
+This indicates the existence of the following 'turning' point,
+\begin{definition}
+    The critical value $s_0$ for Hausdorff measure such that
+    \[
+        H^s(F) = \infty, \: s<s_0
+    \]
+    \[
+        H^s(F) = 0, \: s_0 < s
+    \]
+    is called the Hausdorff Dimension of a set F and denoted by $dim_H(F)$.
+\end{definition}
+
+The notion of this dimension was first introduced by Felix Hausdorff in 1920 in
+a different context, to generalise the dimension of an inner-product space. But
+it has found application for 'measurement' in unexpected places like fractals,
+for which it was further developed.
 
 \section{Example Analysis}
 In this section, the Cantor set will be analysed as the guiding example for
@@ -170,3 +242,4 @@ fractal analysis.
 Simple examples like Cantor dust serve as an important guide to finding
 properties which are transferrable to other more complicated cases, but are
 relatively easily studied here.
+
