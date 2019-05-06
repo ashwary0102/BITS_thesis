@@ -255,10 +255,13 @@ Of course, easily verified by decomposition into disjoint sets.
         defines the set function $\lambda^n \: : \: J^n \rightarrow \bm{R}$
         called the n-dimensional Lebesgue measure.
 \end{definition}
+Important results concerning Lebesgue measure are not provided due to standard
+familiarity with the topic.
 
-\subsubsection{Note on Non-Measurable Sets}
-In this section, the results are presented in the spirit of a complete picture,
-but not proved.
+%TODO
+%\subsubsection{Note on Non-Measurable Sets}
+%In this section, the results are presented in the spirit of a complete picture,
+%but not proved.
 
 
 \section{Hausdorff Measure}
@@ -279,11 +282,32 @@ Let for any set F in a metric space
     H_\delta^s(F) = inf\{|U_i|^s : \{U_i\} \text{ is a $\delta$-cover of F} \}
 \]
 \begin{definition}
-    s-dimensional Hausdorff measure of a set F in a metric space is defined as
+    s-dimensional Hausdorff measure of a set F in a metric space (X, d) is 
+    defined as
     \[
         H^s(F) = \lim_{\delta \to 0} H_\delta^s(F)
     \]
+    $\forall F \subseteq X$.
 \end{definition}
+\begin{theorem}
+    Hausdorff measure on a metric space is an outer measure.
+\end{theorem}
+\begin{theorem}\label{thm_haus_mea_lim}
+    Let $F \subseteq X$, where (X, d) is a metric space
+    \begin{enumerate}
+        \item \[
+                0 < \delta < \gamma \implies H_\delta^s (F) \geqslant
+                H_\delta^s (F) 
+            \]
+        \item \[
+                H^s (F) = \sup_{\delta > 0} H_\delta^s(F)
+            \]
+        \item If $0 < s < t$ and $0 < \delta < $, then
+            \[
+                H_\delta^t(F) \leqslant H_\delta^t(F)
+            \]
+    \end{enumerate}
+\end{theorem}
 \begin{theorem}
     The s-dimensional Hausdorff measure has the following properties in
     $\bm{R}^n$
