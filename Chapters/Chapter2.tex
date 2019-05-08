@@ -13,14 +13,12 @@ sets.
 The principle concern was to develop a rigourous theory of integration of
 functions, which at the time was widely used to caculate areas and volumes,
 decompose functions into Fourier Series etc.
-<fourier series>
 \newline
 The first rigourous theory of integration of discontinuous functions, and
 continuous functions was developed by Riemann and was based on step-functions.
 The theory successfully deals with continuous functions having a finite number
 of discontinuities, and some functions with infinite number of discontinuities
 but is unadequate to tackle some others like the Dirichlet function.
-<Dirichlet Function>
 \newline
 As the events unfolded, it became clearer that the crucial part which was
 missing in the rigourous theory of integration was a rigourous theory of
@@ -47,6 +45,10 @@ development of the foundational theory of sets. Conflict arose between options
 like 'The Axioms of Choice' and the powerset of R to be a measurable space, and
 the choosing of the former lead to existence of some non-measurable sets in
 $\bm{R}$.
+\newline
+Note on contents : contents in this section and the remaining chapter are
+written after majorly studying Stillwell\cite{stillwell},
+Schilling\cite{schilling}.
 
 \subsection{Desired Properties of Measure}
 The properties desired from the concept which assigns a numerical value to the
@@ -104,7 +106,7 @@ basic set theoretic operations.
     then,
     \begin{enumerate}
         \item X, $\phi \: \epsilon$ A, because X, $\phi \epsilon A_i \: \forall
-        \: i$
+            \: i$
         \item Let B $\epsilon$ A, then $B^c \: \epsilon$ A because B belongs to
             all $A_i$ and hence $B^c$ belongs to all $A_i$
         \item Same argument as above.
@@ -142,8 +144,9 @@ basic set theoretic operations.
         B(\bm{R}^n) \: = \sigma(O^n) \: = \: \sigma(C^n) \: = \: \sigma(K^n)
     \]
 \end{theorem}
-\begin{proof}
-\end{proof}
+%\begin{proof}
+%TODO
+%\end{proof}
 
 \section{Measures}
 \begin{definition}
@@ -188,16 +191,12 @@ Of course, easily verified by decomposition into disjoint sets.
             \]
     \end{enumerate}
 \end{theorem}
-\begin{proof}
-\end{proof}
 \begin{theorem}
-    Every measure (or pre-measure) is follows $\sigma$-subadditivity,
+    Every measure (or pre-measure) follows $\sigma$-subadditivity,
     \[
         \mu(\bigcup_{i \epsilon \bm{N}}(B_i) \leqslant \sum_{i \epsilon N}\mu(B_i)
     \]
 \end{theorem}
-\begin{proof}
-\end{proof}
 \begin{definition}
     Let (X, A, $\mu$) be a measure space, N $\epsilon$ A is called a null set if
     $\mu$(N) = 0. The set of all null sets for a measure space is called its
@@ -235,12 +234,12 @@ Of course, easily verified by decomposition into disjoint sets.
 \begin{theorem}
     Any incomplete measure space can be completed.
 \end{theorem}
-\begin{proof}
-    \begin{enumerate}
-        \item Define $A^*$ = \{ S $\cup$ N; S $\epsilon$ A, N $\subset$ M
-            $\epsilon \: N_\mu$ \}
-    \end{enumerate}
-\end{proof}
+%\begin{proof}
+%    \begin{enumerate}
+%        \item Define $A^*$ = \{ S $\cup$ N; S $\epsilon$ A, N $\subset$ M
+%            $\epsilon \: N_\mu$ \}
+%    \end{enumerate}
+%\end{proof}
 
 \section{Important Measures}
 \subsection{Lebesgue Measure}
@@ -249,7 +248,7 @@ Of course, easily verified by decomposition into disjoint sets.
     rectangle $\epsilon$ $J^n$, then
     \[
         \lambda^n([[a,b))) \: = \: \prod_{i=1}^{\infty}(b_i - a_i)
-    \]
+        \]
         defines the set function $\lambda^n \: : \: J^n \rightarrow \bm{R}$
         called the n-dimensional Lebesgue measure.
 \end{definition}
@@ -262,8 +261,10 @@ familiarity with the topic.
 %but not proved.
 
 
-\section{Hausdorff Measure}
-Hausdorff measure even further generalises the notion of Lebesgue measure,
+\subsection{Hausdorff Measure}
+Hausdorff measure even further generalises the notion of Lebesgue measure and
+the its associated dimension, as discussed in the next chapter, generalises the
+notion of dimension for inner product spaces.
 \begin{definition}
     The diameter of a set S in a metric space is defined as
     \[
@@ -317,10 +318,10 @@ Let for any set F in a metric space
             \]
             , where $\mu_n : \bm{B^*(R^n)} \to [0, \infty]$ is the n-dimensional lebesgue
             measure.
-        \item For lower-dimensional subset in $\bm{R}^n$ : $H^0(F)$ gives number
-            of points if finite, and infinity otherwise
-            \newline similarly, $H^1(F)$ gives the length of a smooth curve
-            \newline and so on
+        \item For lower-dimensional subset in $\bm{R}^n$ : %$H^0(F)$ gives number
+            %of points if finite, and infinity otherwise
+            $H^1(F)$ gives the length of a smooth curve
+            \newline $H^2(F)$ the area, and so on.
     \end{enumerate}
 \end{theorem}
 

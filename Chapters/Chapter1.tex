@@ -14,7 +14,7 @@ method used since the time of Euclid to calculate areas and volumes of figures
 and surfaces. Along with Descartes' Analytic Geometry, existent algebra and
 Newton's calculus of infinite series, a complete system for integration and
 differentiation of all functions of single variable expressible as power series
-was possible.
+was possible.\cite{stillwell}
 \newline
 Multivariable calculus is the next natural step in the process, applying the
 same techniques and principles from single variable calculus to functions of
@@ -24,7 +24,9 @@ The rigourous analysis and verification of the tools and techniques of calculus
 to place it on a logical and deductive footing constitutes Mathematical Analysis. Hence,
 multivariable differential analysis is the branch concerned with proofs of
 validity of techniques used in multivariable differential calculus.
-
+\newline
+Contents in this chapter are majorly guided by the study of books
+Apostol\cite{apostol}, and Stillwell\cite{stillwell}.
 
 \section{Directorial Derivative}
 Let U be any subset of $\bm{R}^n$ and let $\bm{f} : U \rightarrow \bm{R}^m$  be a function.
@@ -32,21 +34,21 @@ Let $\bm{u}$ be any direction in $\bm{R}^m$ and $\bm{c}$ be any point in domain,
 then the directorial derivative aims to estimate the change in $\bm{f}$ as it
 moves from point $\bm{c}$ to neighbouring points along the direction $\bm{u}$.
 \begin{definition}
-Directorial derivative of $\bm{f}$ at point $\bm{c}$ in direction $\bm{u}$ is
-denoted by $\bm{f(c;u)}$ and defined as 
-\[ \bm{f(c;u)} = \lim_{h \to 0}
-\frac{\bm{f}(\bm{c}+h\bm{u})-\bm{f(c)}}{h} \]
+    Directorial derivative of $\bm{f}$ at point $\bm{c}$ in direction $\bm{u}$ is
+    denoted by $\bm{f(c;u)}$ and defined as 
+    \[ \bm{f(c;u)} = \lim_{h \to 0}
+    \frac{\bm{f}(\bm{c}+h\bm{u})-\bm{f(c)}}{h} \]
 \end{definition}
 \begin{lemma}
-Existence of all directorial derivatives at a point is not a sufficient
-condition for continuity of the function.
+    Existence of all directorial derivatives at a point is not a sufficient
+    condition for continuity of the function.
 \end{lemma}
-\begin{proof}
-Consider the counter example,
-    %TODO
-\end{proof}
+%\begin{proof}
+%Consider the counter example,
+%TODO
+%\end{proof}
 \begin{corollary}
-Directorial derivatives may or may not be linear operators.
+    Directorial derivatives may or may not be linear operators.
 \end{corollary}
 
 
@@ -56,24 +58,24 @@ an analog to single variable derivative becuase of two primary reasons, as shown
 above : lack of failing to preserve continuity and the possibility of
 non-linearity. So a better alternative is needed and defined as follows.
 \begin{definition}
-The total derivative of a function  $\bm{f} : \bm{U} \rightarrow \bm{R}^m$ at point
-$\bm{c}$, if it exists, is a linear operator $\bm{A_{c}} : \bm{R}^n \rightarrow \bm{R}^m$ such
-that
-\[
-\bm{f(c+v) = f(c) + A_{c}(v) + ||v||E_{c}(v)}
-\]
-where $\bm{E_{c}(v) \rightarrow 0}$ as $\bm{v\rightarrow 0}$, $\forall \bm{v}$
-$\epsilon$ $\bm{U}$. Here $\bm{U}$ is an n-ball centered at $\bm{c}$.
+    The total derivative of a function  $\bm{f} : \bm{U} \rightarrow \bm{R}^m$ at point
+    $\bm{c}$, if it exists, is a linear operator $\bm{A_{c}} : \bm{R}^n \rightarrow \bm{R}^m$ such
+    that
+    \[
+        \bm{f(c+v) = f(c) + A_{c}(v) + ||v||E_{c}(v)}
+    \]
+    where $\bm{E_{c}(v) \rightarrow 0}$ as $\bm{v\rightarrow 0}$, $\forall \bm{v}$
+    $\epsilon$ $\bm{U}$. Here $\bm{U}$ is an n-ball centered at $\bm{c}$.
 \end{definition}
 
 \subsection{Properties of Total Derivative}
 \begin{theorem}
-If the total derivative of a function $\bm{f} : \bm{U} \rightarrow \bm{R}^m$
-exists at point $\bm{c}$, then
-\[
-\bm{A_{c}(v) = f(c;v)}.
-\]
-Here $\bm{U}$ is an n-ball centered at $\bm{c}$.
+    If the total derivative of a function $\bm{f} : \bm{U} \rightarrow \bm{R}^m$
+    exists at point $\bm{c}$, then
+    \[
+        \bm{A_{c}(v) = f(c;v)}.
+    \]
+    Here $\bm{U}$ is an n-ball centered at $\bm{c}$.
 \end{theorem}
 \begin{proof}
     Let the total derivative of a function $\bm{f}$ exist in the n-ball
@@ -89,7 +91,7 @@ Here $\bm{U}$ is an n-ball centered at $\bm{c}$.
     $\bm{A_c(u) = f(c;u)}$ by definition.
 \end{proof}
 \begin{corollary}
-If the total derivative for a function exists at a point, then it is unique.
+    If the total derivative for a function exists at a point, then it is unique.
 \end{corollary}
 \begin{proof}
     The directorial derivative, by definition, is a unique limit. By above
@@ -106,7 +108,7 @@ If the total derivative for a function exists at a point, then it is unique.
     kth partial derivative of function $\bm{f}$ at point $\bm{c}$.
 \end{theorem}
 \begin{proof}
-Since the total derivative exists, directorial derivative exists and is linear
+    Since the total derivative exists, directorial derivative exists and is linear
     in $\bm{v}$ at point $\bm{c}$.
     \[
         \bm{f(c;v) = f(c;\sum_{i=1}^{n} v_i e_i)}
@@ -118,6 +120,14 @@ Since the total derivative exists, directorial derivative exists and is linear
         \bm{f(c;v) = \sum_{i=1}^{n} v_i D_if(c)}
     \]
 \end{proof}
+\begin{theorem}
+    If a function $\bm{f} : \bm{U} \subseteq \bm{R}^n \rightarrow \bm{R}^m$ is
+    differentiable at a point $\bm{c} \epsilon \bm{U}$, then it is continuous 
+    at that point.
+\end{theorem}
+%\begin{proof}
+%TODO
+%\end{proof}
 
 Following theorem derives the matrix form of the linear operator $\bm{A_c(v)}$
 \begin{theorem}

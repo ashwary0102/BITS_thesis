@@ -29,7 +29,7 @@
 %-------------------------------------------------------------------------------
 
 \documentclass[11pt, a4paper, oneside]{Thesis} % Paper size, default font size
-                                               % and one-sided paper
+% and one-sided paper
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
@@ -53,6 +53,7 @@
 \usepackage[backend=bibtex]{biblatex} %for managing bibliography
 \bibliography{Bibliography}
 
+
 \usepackage{graphicx} %for managing figures etc
 
 \title{\ttitle} % Defines the thesis title - don't touch this
@@ -69,7 +70,7 @@
 \lhead{} % Clears the left side page header
 
 \pagestyle{fancy} % Finally, use the "fancy" page style to implement the
-                  %FancyHdr headers
+%FancyHdr headers
 
 % Input all the variables used in the document. Please fill out the
 % variables.tex file with all your details.
@@ -84,10 +85,22 @@
 %\Quotation{We must know. We will know.}{David Hilbert}
 
 \begin{abstract}
-A rigourous but intuitive approach to analysis in Euclidean Spaces is undertaken, aiming to study some standard results in multivariable differential analysis, measure theory and calculus on smooth manifolds with an inclination to deduce and prove by self. Some interesting and unexpected applications of the said are then explored as a natural development of the underlying theoretical ideas.
+    A rigourous but intuitive approach to analysis in euclidean spaces is taken,
+    where results in multivariable differential analysis are derived from the
+    very basic needs and developments, and verified in the standard method of
+    set-theoretic proofs. Moving beyond calculus, basic theory of measuribility
+    is studied, leading to an unexpected application in studying irregular
+    objects in mathematics and nature : fractals. Another aim is to develop and
+    refine a personally suitable method of learning through research.
 \end{abstract}
 
 \begin{acknowledgements}
+    I am grateful for the opportunity provided by the institution Birla
+    Institutue of Technology and Sciences to work one the topic of one's own
+    choosing, and specifically for Dr. Shilpa Gondali's unconditional patience
+    and support for my meandering methods, along with the constant stream of
+    mathematical help. Also, as always implied, to my parents for everything
+    from coming into existence to continuing that joyfully.
 \end{acknowledgements}
 
 %-------------------------------------------------------------------------------
@@ -105,34 +118,34 @@ A rigourous but intuitive approach to analysis in Euclidean Spaces is undertaken
 \lhead{\emph{List of Figures}}
 \listoffigures % Write out the List of Figures
 
- % Set the left side page header to "List of Tables"
-\lhead{\emph{List of Tables}}
-\listoftables % Write out the List of Tables
+% Set the left side page header to "List of Tables"
+%\lhead{\emph{List of Tables}}
+%\listoftables % Write out the List of Tables
 
 %-------------------------------------------------------------------------------
 %	ABBREVIATIONS
 %-------------------------------------------------------------------------------
 
-\clearpage % Start a new page
+%\clearpage % Start a new page
 
- % Set the line spacing to 1.5, this makes the following tables easier to read
-\setstretch{1.5}
+% Set the line spacing to 1.5, this makes the following tables easier to read
+%\setstretch{1.5}
 
-\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
-\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
+%\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
+%\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
 {
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
-%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+    %\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
+    %\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
 }
 
 %-------------------------------------------------------------------------------
 %	PHYSICAL CONSTANTS/OTHER DEFINITIONS
 %-------------------------------------------------------------------------------
 
-\clearpage % Start a new page
+%\clearpage % Start a new page
 
 % Set the left side page header to "Physical Constants"
-\lhead{\emph{Physical Constants}}
+%\lhead{\emph{Physical Constants}}
 
 % Include a list of Physical Constants (a four column table)
 %\listofconstants{lrcl}
@@ -145,24 +158,24 @@ A rigourous but intuitive approach to analysis in Euclidean Spaces is undertaken
 %	SYMBOLS
 %-------------------------------------------------------------------------------
 
-\clearpage % Start a new page
+%\clearpage % Start a new page
 
-\lhead{\emph{Glossary}} % Set the left side page header to "Symbols"
+%\lhead{\emph{Glossary}} % Set the left side page header to "Symbols"
 
-\listofnomenclature % List the nomenclature. (We use the glossaries package)
+%\listofnomenclature % List the nomenclature. (We use the glossaries package)
 
 %-------------------------------------------------------------------------------
 %	DEDICATION
 %-------------------------------------------------------------------------------
 
-\setstretch{1.3} % Return the line spacing back to 1.3
+%\setstretch{1.3} % Return the line spacing back to 1.3
 
-\pagestyle{empty} % Page style needs to be empty for this page
+%\pagestyle{empty} % Page style needs to be empty for this page
 
 % Dedication text
-\Dedicatory{'Dedication'}
+%\Dedicatory{'Dedication'}
 
-\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+%\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
 %-------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS

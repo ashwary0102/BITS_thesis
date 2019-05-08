@@ -13,10 +13,9 @@
 
 \section{Introduction and Overview}
 Fractals, a term now popular, was coined relatively recently (1975, by Benoit
-Mandelbrot) while investigating the 'roughness' of nature; in his own words.
+Mandelbrot) while investigating the `roughness' of nature; in his own words.
 It was chosen along the intuition that these objects somehow possess fractional
-,fragmented properties.
-<Give images and examples> 
+, fragmented properties.
 \newline
 But nature or its investigation isn't where these objects received their first
 formal recognition, it was in the investigations of pure mathematics. The first
@@ -28,7 +27,7 @@ At the time, these constructions of men
 were unwelcome and pathological examples which deviated from the standard in
 mathematics, nor were they inspired by nature it had
 seemed and hence were gilded with
-the term `monster' curves.
+the term `monster' curves.\cite{mandelbrot}
 \newline
 Benoit Mandelbrot, as mentioned earlier, was studying the irregularities in
 nature and the topics were wide and diverse. One of the aims were to quantify
@@ -46,7 +45,7 @@ what's traditionally called `chaos'. And hence the field of Fractal Geometry
 entered mainstream research and still continues to be an active area.
 \newline One important aspect of all fractals that derserves special emphasis is
 that they ward off all attacks of classical geometry and demand new approaches
-to make sense of and understand geometrically.
+to make sense of and understand geometrically.\cite{mandelbrot}
 
 
 \section{Examples and Features}
@@ -54,14 +53,14 @@ This section provides visual examples to get acquainted with fractals.
 \subsection{Fractals From Math}
 \subsubsection{Cantor Set}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{Pictures/cantor_set.png}
-  \caption{First four iterations of Cantor Set.}
-  \label{fig:cantor_set}
+    \includegraphics[width=\linewidth]{Pictures/cantor_set.png}
+    \caption{First four iterations of Cantor Set.}
+    \label{fig:cantor_set}
 \end{figure}
 Cantor set is arguably the most important fractal one could consider, and also
 the simplest in terms of set theory. 
 \begin{definition}
-    Cantor set is defined as
+    Cantor set is defined as\cite{edgar}
     \[
         C = \bigcap_{i=0}^{\infty} C_i
     \]
@@ -76,28 +75,28 @@ the simplest in terms of set theory.
         C_2 = [0, \frac{1}{9}] \cup [\frac{2}{9}, \frac{3}{9} \cup
         [\frac{6}{9}, \frac{7}{9}] \cup [\frac{8}{9}, 1]
         \]
-    \[
-        \vdots
-    \]
-    are iteratively constructed by removing the middle third of every interval
-    and retaining the rest in every iteration.
+        \[
+            \vdots
+        \]
+        are iteratively constructed by removing the middle third of every interval
+        and retaining the rest in every iteration.
 \end{definition}
 \subsubsection{Koch Curve}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{Pictures/koch_curve.png}
-  \caption{Koch Curve.}
-  \label{fig:cantor_set}
+    \includegraphics[width=\linewidth]{Pictures/koch_curve.png}
+    \caption{Koch Curve.}
+    \label{fig:cantor_set}
 \end{figure}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{Pictures/snowflake.png}
-  \caption{Snowflake made from Koch curves.}
-  \label{fig:snowflake}
+    \includegraphics[width=\linewidth]{Pictures/snowflake.png}
+    \caption{Snowflake made from Koch curves.}
+    \label{fig:snowflake}
 \end{figure}
 Koch curve was first described in 1904 by von Koch as a continuous but nowhere
 differentiable curve, which could constructed simply.
 The Koch Snowflake has infinite length like the Koch curve, but has finite area.
 
-Koch curve can be constructed in multiple ways, one of them being starting with
+The curve can be constructed in multiple ways, one of them being starting with
 a line segment. Then construct an equilateral triangle with the middle third of
 the line segment. Then the part of the trianlge coinciding with the orginal
 segment is truncated. This way we get the next iteration, $P_1$. Repeating the
@@ -107,19 +106,19 @@ limiting iteration and n tends to $\infty$.
 \subsection{Fractals in Nature}
 \subsubsection{Physical Objects Resembling Fractals}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{Pictures/real_snowflake.png}
-  \caption{A real snowflake.}
-  \label{fig:real_snowflake}
+    \includegraphics[width=\linewidth]{Pictures/real_snowflake.png}
+    \caption{A real snowflake.}
+    \label{fig:real_snowflake}
 \end{figure}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{Pictures/broccoli.png}
-  \caption{Broccoli.}
-  \label{fig:broccoli}
+    \includegraphics[width=\linewidth]{Pictures/broccoli.png}
+    \caption{Broccoli.}
+    \label{fig:broccoli}
 \end{figure}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{Pictures/broccoli_zoomed.png}
-  \caption{Broccoli's scaling.}
-  \label{fig:broccoli_zoomed}
+    \includegraphics[width=\linewidth]{Pictures/broccoli_zoomed.png}
+    \caption{Broccoli's scaling.}
+    \label{fig:broccoli_zoomed}
 \end{figure}
 Some physical objects like the surface of a mountain, the coastline, the surface
 of a broccoli etc are 'rough' and non-euclidean in nature. They are better
@@ -127,9 +126,9 @@ modeled for desired properties as fractals due to their self-similarity. The
 Koch snowflake is called so because it resembles a real snowflake.
 \subsubsection{Other Occurences}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{Pictures/strange_attractor.png}
-  \caption{Strange attractor for a Lorenz Equations.}
-  \label{fig:strange_attractor}
+    \includegraphics[width=\linewidth]{Pictures/strange_attractor.png}
+    \caption{Strange attractor for Lorenz Equations.}
+    \label{fig:strange_attractor}
 \end{figure}
 As mentioned before, fractals have been successfully used to model a wide
 variety of things in nature, either directly or indirectly. Indirectly, fractals
@@ -138,7 +137,8 @@ dynamical systems like a double pendulum show high sensitivity to initial
 conditions. What this means is that for the same pendulum, two mildly different
 initial points can lead to two wildly different end points. What's interesting
 is that the resulting sets are extremely erratic at first glance, but they often
-turn out to be fractals. In these cases, they are called strange attractors.
+turn out to be fractals. In these cases, they are called strange
+attractors.\cite{strogatz}
 For example, consider the Lorenz System$(\rho = 28, \sigma =10,
 \beta=\frac{8}{3})$ and it's solution plot as shown in
 \ref{fig:strange_attractor},
@@ -187,12 +187,13 @@ approach of classical geometry, even though its methods are NOT applicable.
 These include study of global properties using various notions of dimension,
 study of local behaviour of fractals, projections, intersections etc.
 \newline Even though an all encompassing definition is not yet available,
-analysis can only proceed through definition. Following definition includes most
+analysis can only proceed through definition. Following definition includes
+most
 objects deemed fractals and only skips few borderline cases, is the best
 available mathematical definition and hence will be used.
 \begin{definition}
     A subset of a Euclidean space $\bm{R}^n$ is called a fractal if its
-    hausdorff dimension strictly exceeds its topological dimension.
+    hausdorff dimension is strictly greater than its topological dimension.
 \end{definition}
 The terms will be defined in the following sections.
 
